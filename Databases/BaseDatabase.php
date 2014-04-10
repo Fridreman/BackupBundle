@@ -66,7 +66,7 @@ abstract class BaseDatabase
         $this->filesystem->mkdir($this->compressedArchivePath);
         $this->archivePath = $this->compressedArchivePath . $fileName;
 
-        $archive = sprintf('tar -czf %s -C %s .', $this->archivePath, $this->basePath);
+        $archive = sprintf('tar -czf %s -C %s .', $this->archivePath, $this->dataPath);
 
         $this->execute($archive);
     }

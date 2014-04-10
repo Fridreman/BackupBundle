@@ -1,3 +1,6 @@
+parameters:
+    dizda.backups_dir: "db_backup/"
+
 services:
     dizda.backup.database.mongodb:
         class: Dizda\BackupBundle\Databases\MongoDB
@@ -10,7 +13,7 @@ services:
             - %dizda_backup.databases.mongodb.db_password%
             - %dizda_backup.output_file_prefix%
         calls:
-            - [setBackupsDir, ["%kernel.root_dir%"]]
+            - [setBackupsDir, [%dizda.backups_dir%]]
 
     dizda.backup.database.mysql:
         class: Dizda\BackupBundle\Databases\MySQL
@@ -23,7 +26,7 @@ services:
             - %dizda_backup.databases.mysql.db_password%
             - %dizda_backup.output_file_prefix%
         calls:
-            - [setBackupsDir, ["%kernel.root_dir%"]]
+            - [setBackupsDir, [%dizda.backups_dir%]]
 
     dizda.backup.database.postgresql:
         class: Dizda\BackupBundle\Databases\PostgreSQL
@@ -35,4 +38,4 @@ services:
             - %dizda_backup.databases.postgresql.db_password%
             - %dizda_backup.output_file_prefix%
         calls:
-            - [setBackupsDir, ["%kernel.root_dir%"]]
+            - [setBackupsDir, [%dizda.backups_dir%]]
