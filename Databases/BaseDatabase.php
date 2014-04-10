@@ -100,6 +100,16 @@ abstract class BaseDatabase
         $this->filesystem->remove($this->compressedArchivePath);
     }
 
+    /**
+     * Remove db backup files (NOT ARCHIVE FILES ONLY)
+     *
+     * @access public
+     * @return void
+     */
+    public function removeDataPath()
+    {
+        $this->filesystem->remove($this->dataPath);
+    }
 
     /**
      * Migration procedure for each databases type
