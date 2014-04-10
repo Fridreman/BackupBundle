@@ -48,7 +48,7 @@ abstract class BaseDatabase
      */
     final public function prepare()
     {
-        $this->basePath = $this->backupsDir.'/';
+        $this->basePath = $this->backupsDir.'/db_backups/';
         $this->dataPath     = $this->basePath . static::DB_PATH . '/';
 
         $this->filesystem->mkdir($this->dataPath);
