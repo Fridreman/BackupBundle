@@ -1,0 +1,16 @@
+{
+    "name": "xedin/symfony2-db-backup-bundle",
+    "description": "Fork of https://github.com/dizda/CloudBackupBundle. Used to create backup of selected db (mongo / mysql / etc)",
+    "authors": [
+        {
+            "name": "Alex",
+            "email": "xedinaska@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": { "Dizda\\BackupBundle": "" }
+    }
+}
