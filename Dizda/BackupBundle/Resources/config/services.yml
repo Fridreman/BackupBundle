@@ -1,5 +1,5 @@
 parameters:
-    dizda.backups_dir: "db_backup/"
+    dizda.backups_dir: %kernel.root_dir%
 
 services:
     dizda.backup.database.mongodb:

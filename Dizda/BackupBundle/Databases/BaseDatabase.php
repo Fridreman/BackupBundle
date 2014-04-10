@@ -48,7 +48,7 @@ abstract class BaseDatabase
      */
     final public function prepare()
     {
-        $this->basePath = $this->backupsDir;
+        $this->basePath = $this->backupsDir.'/';
         $this->dataPath     = $this->basePath . static::DB_PATH . '/';
 
         $this->filesystem->mkdir($this->dataPath);
@@ -61,7 +61,7 @@ abstract class BaseDatabase
     final public function compression()
     {
         $fileName                       = $this->filePrefix . '_' . date('Y_m_d-H_i_s') . '.tar';
-        $this->compressedArchivePath    = $this->basePath .'/dbcompressed/';
+        $this->compressedArchivePath    = $this->basePath .'dbcompressed/';
 
         $this->filesystem->mkdir($this->compressedArchivePath);
         $this->archivePath = $this->compressedArchivePath . $fileName;
