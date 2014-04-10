@@ -1,5 +1,5 @@
 <?php
-namespace Dizda\CloudBackupBundle\Databases;
+namespace Dizda\BackupBundle\Databases;
 
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Process\Process;
@@ -7,7 +7,7 @@ use Symfony\Component\Process\Process;
 /**
  * Class BaseDatabase
  *
- * @package Dizda\CloudBackupBundle\Databases
+ * @package Dizda\BackupBundle\Databases
  * @author  Jonathan Dizdarevic <dizda@dizda.fr>
  */
 abstract class BaseDatabase

@@ -14,7 +14,7 @@ class AppKernel extends Kernel
             //new \Symfony\Bundle\TwigBundle\TwigBundle(),
             //new \Symfony\Bundle\MonologBundle\MonologBundle(),
             //new \Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new \Dizda\CloudBackupBundle\DizdaCloudBackupBundle()
+            new \Dizda\BackupBundle\DizdaBackupBundle()
         );
     }
 
@@ -31,7 +31,7 @@ class AppKernel extends Kernel
      */
     public function getCacheDir()
     {
-        return sys_get_temp_dir().'/DizdaCloudBackupBundle/cache';
+        return sys_get_temp_dir().'/DizdaBackupBundle/cache';
     }
 
     /**
@@ -39,6 +39,6 @@ class AppKernel extends Kernel
      */
     public function getLogDir()
     {
-        return sys_get_temp_dir().'/DizdaCloudBackupBundle/logs';
+        return sys_get_temp_dir().'/DizdaBackupBundle/logs';
     }
 }

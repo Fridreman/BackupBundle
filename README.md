@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/dizda/CloudBackupBundle.png?branch=master)](https://travis-ci.org/dizda/CloudBackupBundle)
-CloudBackupBundle
+[![Build Status](https://travis-ci.org/dizda/BackupBundle.png?branch=master)](https://travis-ci.org/dizda/BackupBundle)
+BackupBundle
 =================
 
 This bundle helps you to backup your databases and upload it to the cloud with only one Symfony2 command.
@@ -37,7 +37,7 @@ Installation (>=Symfony 2.1)
 
 ### Composer
 
-Download CloudBackupBundle and its dependencies to the vendor directory. You can use Composer for the automated process:
+Download BackupBundle and its dependencies to the vendor directory. You can use Composer for the automated process:
 
 ```bash
 $ php composer.phar require dizda/cloud-backup-bundle dev-master
@@ -55,7 +55,7 @@ public function registerBundles()
     $bundles = array(
         // ...
         new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
-        new Dizda\CloudBackupBundle\DizdaCloudBackupBundle(),
+        new Dizda\BackupBundle\DizdaBackupBundle(),
         // ...
     );
 }
@@ -173,7 +173,7 @@ or simply
 $ php app/console dizda:backup:start
 ```
 
-![](https://github.com/dizda/CloudBackupBundle/raw/master/Resources/doc/dizda-Cloud-Backup-Bundle-symfony2.png)
+![](https://github.com/dizda/BackupBundle/raw/master/Resources/doc/dizda-Cloud-Backup-Bundle-symfony2.png)
 
 Capifony integration
 --------------------

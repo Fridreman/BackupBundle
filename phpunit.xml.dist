@@ -20,7 +20,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="CloudBackupBundle Test Suite">
+        <testsuite name="BackupBundle Test Suite">
             <directory suffix="Test.php">./Tests</directory>
         </testsuite>
     </testsuites>

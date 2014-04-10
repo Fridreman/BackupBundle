@@ -1,13 +1,13 @@
 <?php
 
-namespace Dizda\CloudBackupBundle\Tests\Databases;
+namespace Dizda\BackupBundle\Tests\Databases;
 
-use Dizda\CloudBackupBundle\Tests\AbstractTesting;
+use Dizda\BackupBundle\Tests\AbstractTesting;
 
 /**
  * Class MySQLTest
  *
- * @package Dizda\CloudBackupBundle\Tests\Databases
+ * @package Dizda\BackupBundle\Tests\Databases
  */
 class MySQLTest extends AbstractTesting
 {
@@ -16,7 +16,7 @@ class MySQLTest extends AbstractTesting
      */
     public function testGetCommand()
     {
-        $mysql = self::$kernel->getContainer()->get('dizda.cloudbackup.database.mysql');
+        $mysql = self::$kernel->getContainer()->get('dizda.Backup.database.mysql');
         $mysql->__construct(true, 'localhost', 3306, 'dizbdd', 'root', 'test', 'localhost');
 
         // dump all databases

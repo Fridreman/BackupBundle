@@ -1,13 +1,13 @@
 <?php
 
-namespace Dizda\CloudBackupBundle\Tests;
+namespace Dizda\BackupBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
  * Class MongoDBTest
  *
- * @package Dizda\CloudBackupBundle\Tests\Databases
+ * @package Dizda\BackupBundle\Tests\Databases
  */
 class AbstractTesting extends WebTestCase
 {

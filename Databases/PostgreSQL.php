@@ -1,10 +1,10 @@
 <?php
-namespace Dizda\CloudBackupBundle\Databases;
+namespace Dizda\BackupBundle\Databases;
 
 /**
  * Class MySQL
  *
- * @package Dizda\CloudBackupBundle\Databases
+ * @package Dizda\BackupBundle\Databases
  * @author  István Manzuk <istvan.manzuk@gmail.com>
  */
 class PostgreSQL extends BaseDatabase

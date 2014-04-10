@@ -1,6 +1,6 @@
 services:
-    dizda.cloudbackup.database.mongodb:
-        class: Dizda\CloudBackupBundle\Databases\MongoDB
+    dizda.Backup.database.mongodb:
+        class: Dizda\BackupBundle\Databases\MongoDB
         arguments:
             - %dizda_cloud_backup.databases.mongodb.all_databases%
             - %dizda_cloud_backup.databases.mongodb.host%
@@ -12,8 +12,8 @@ services:
         calls:
             - [setKernelCacheDir, ["%kernel.cache_dir%"]]
 
-    dizda.cloudbackup.database.mysql:
-        class: Dizda\CloudBackupBundle\Databases\MySQL
+    dizda.Backup.database.mysql:
+        class: Dizda\BackupBundle\Databases\MySQL
         arguments:
             - %dizda_cloud_backup.databases.mysql.all_databases%
             - %dizda_cloud_backup.databases.mysql.host%
@@ -25,8 +25,8 @@ services:
         calls:
             - [setKernelCacheDir, ["%kernel.cache_dir%"]]
 
-    dizda.cloudbackup.database.postgresql:
-        class: Dizda\CloudBackupBundle\Databases\PostgreSQL
+    dizda.Backup.database.postgresql:
+        class: Dizda\BackupBundle\Databases\PostgreSQL
         arguments:
             - %dizda_cloud_backup.databases.postgresql.host%
             - %dizda_cloud_backup.databases.postgresql.port%

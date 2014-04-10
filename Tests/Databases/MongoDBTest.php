@@ -1,13 +1,13 @@
 <?php
 
-namespace Dizda\CloudBackupBundle\Tests\Databases;
+namespace Dizda\BackupBundle\Tests\Databases;
 
-use Dizda\CloudBackupBundle\Tests\AbstractTesting;
+use Dizda\BackupBundle\Tests\AbstractTesting;
 
 /**
  * Class MongoDBTest
  *
- * @package Dizda\CloudBackupBundle\Tests\Databases
+ * @package Dizda\BackupBundle\Tests\Databases
  */
 class MongoDBTest extends AbstractTesting
 {
@@ -16,7 +16,7 @@ class MongoDBTest extends AbstractTesting
      */
     public function testGetCommand()
     {
-        $mongodb = self::$kernel->getContainer()->get('dizda.cloudbackup.database.mongodb');
+        $mongodb = self::$kernel->getContainer()->get('dizda.Backup.database.mongodb');
 
         // dump all dbs
         $mongodb->__construct(true, 'localhost', 27017, 'dizbdd', null, null, 'localhost');

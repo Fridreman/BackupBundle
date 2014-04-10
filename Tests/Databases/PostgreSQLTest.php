@@ -1,13 +1,13 @@
 <?php
 
-namespace Dizda\CloudBackupBundle\Tests\Databases;
+namespace Dizda\BackupBundle\Tests\Databases;
 
-use Dizda\CloudBackupBundle\Tests\AbstractTesting;
+use Dizda\BackupBundle\Tests\AbstractTesting;
 
 /**
  * Class PostgreSQLTest
  *
- * @package Dizda\CloudBackupBundle\Tests\Databases
+ * @package Dizda\BackupBundle\Tests\Databases
  */
 class PostgreSQLTest extends AbstractTesting
 {
@@ -16,7 +16,7 @@ class PostgreSQLTest extends AbstractTesting
      */
     public function testGetCommand()
     {
-        $postgresql = self::$kernel->getContainer()->get('dizda.cloudbackup.database.postgresql');
+        $postgresql = self::$kernel->getContainer()->get('dizda.Backup.database.postgresql');
 
         // dump specified database
         $postgresql->__construct('localhost', 5678, 'dizbdd', 'admin', 'test', 'testcase1');
