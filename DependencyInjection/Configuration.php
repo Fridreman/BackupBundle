@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('dizda_cloud_backup');
+        $rootNode = $treeBuilder->root('dizda_backup');
 
         $rootNode
         ->children()

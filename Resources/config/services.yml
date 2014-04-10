@@ -1,38 +1,38 @@
 services:
-    dizda.Backup.database.mongodb:
+    dizda.backup.database.mongodb:
         class: Dizda\BackupBundle\Databases\MongoDB
         arguments:
-            - %dizda_cloud_backup.databases.mongodb.all_databases%
-            - %dizda_cloud_backup.databases.mongodb.host%
-            - %dizda_cloud_backup.databases.mongodb.port%
-            - %dizda_cloud_backup.databases.mongodb.database%
-            - %dizda_cloud_backup.databases.mongodb.db_user%
-            - %dizda_cloud_backup.databases.mongodb.db_password%
-            - %dizda_cloud_backup.output_file_prefix%
+            - %dizda_backup.databases.mongodb.all_databases%
+            - %dizda_backup.databases.mongodb.host%
+            - %dizda_backup.databases.mongodb.port%
+            - %dizda_backup.databases.mongodb.database%
+            - %dizda_backup.databases.mongodb.db_user%
+            - %dizda_backup.databases.mongodb.db_password%
+            - %dizda_backup.output_file_prefix%
         calls:
-            - [setKernelCacheDir, ["%kernel.cache_dir%"]]
+            - [setBackupsDir, ["%kernel.root_dir%"]]
 
-    dizda.Backup.database.mysql:
+    dizda.backup.database.mysql:
         class: Dizda\BackupBundle\Databases\MySQL
         arguments:
-            - %dizda_cloud_backup.databases.mysql.all_databases%
-            - %dizda_cloud_backup.databases.mysql.host%
-            - %dizda_cloud_backup.databases.mysql.port%
-            - %dizda_cloud_backup.databases.mysql.database%
-            - %dizda_cloud_backup.databases.mysql.db_user%
-            - %dizda_cloud_backup.databases.mysql.db_password%
-            - %dizda_cloud_backup.output_file_prefix%
+            - %dizda_backup.databases.mysql.all_databases%
+            - %dizda_backup.databases.mysql.host%
+            - %dizda_backup.databases.mysql.port%
+            - %dizda_backup.databases.mysql.database%
+            - %dizda_backup.databases.mysql.db_user%
+            - %dizda_backup.databases.mysql.db_password%
+            - %dizda_backup.output_file_prefix%
         calls:
-            - [setKernelCacheDir, ["%kernel.cache_dir%"]]
+            - [setBackupsDir, ["%kernel.root_dir%"]]
 
-    dizda.Backup.database.postgresql:
+    dizda.backup.database.postgresql:
         class: Dizda\BackupBundle\Databases\PostgreSQL
         arguments:
-            - %dizda_cloud_backup.databases.postgresql.host%
-            - %dizda_cloud_backup.databases.postgresql.port%
-            - %dizda_cloud_backup.databases.postgresql.database%
-            - %dizda_cloud_backup.databases.postgresql.db_user%
-            - %dizda_cloud_backup.databases.postgresql.db_password%
-            - %dizda_cloud_backup.output_file_prefix%
+            - %dizda_backup.databases.postgresql.host%
+            - %dizda_backup.databases.postgresql.port%
+            - %dizda_backup.databases.postgresql.database%
+            - %dizda_backup.databases.postgresql.db_user%
+            - %dizda_backup.databases.postgresql.db_password%
+            - %dizda_backup.output_file_prefix%
         calls:
-            - [setKernelCacheDir, ["%kernel.cache_dir%"]]
+            - [setBackupsDir, ["%kernel.root_dir%"]]

@@ -67,7 +67,7 @@ Configuration
 Here is the default configuration for the bundle:
 
 ```yml
-dizda_cloud_backup:
+dizda_backup:
     # By default backup files will have your servers hostname as prefix
     # such as: hostname_2014_01_01-21_08_39.tar
     output_file_prefix: hostname 
@@ -112,7 +112,7 @@ It is recommended to keep real values for logins and passwords in your parameter
 
 ```yml
 # app/config/config.yml
-dizda_cloud_backup:
+dizda_backup:
     cloud_storages:
         dropbox:
             user:        %dizda_cloud_dropbox_user%

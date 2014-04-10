@@ -15,12 +15,13 @@ abstract class BaseDatabase
     const DB_PATH = '';
 
     protected $filePrefix;
-    protected $kernelCacheDir;
     protected $filesystem;
     protected $basePath;
     protected $dataPath;
     protected $archivePath;
     protected $compressedArchivePath;
+
+    protected $backupsDir;
 
 
     /**
@@ -47,7 +48,7 @@ abstract class BaseDatabase
      */
     final public function prepare()
     {
-        $this->basePath     = $this->kernelCacheDir . '/db/';
+        $this->basePath = $this->backupsDir;
         $this->dataPath     = $this->basePath . static::DB_PATH . '/';
 
         $this->filesystem->mkdir($this->dataPath);
@@ -60,7 +61,7 @@ abstract class BaseDatabase
     final public function compression()
     {
         $fileName                       = $this->filePrefix . '_' . date('Y_m_d-H_i_s') . '.tar';
-        $this->compressedArchivePath    = $this->basePath .'../dbcompressed/';
+        $this->compressedArchivePath    = $this->basePath .'/dbcompressed/';
 
         $this->filesystem->mkdir($this->compressedArchivePath);
         $this->archivePath = $this->compressedArchivePath . $fileName;
@@ -124,15 +125,15 @@ abstract class BaseDatabase
         return $this->archivePath;
     }
 
-
     /**
-     * @param string $kernelCacheDir
+     * Specify directory for backup files
      *
-     * Setting Kernel cache directory
+     * @access public
+     * @param $backupsDir
+     * @return void
      */
-    public function setKernelCacheDir($kernelCacheDir)
+    public function setBackupsDir($backupsDir)
     {
-        $this->kernelCacheDir = $kernelCacheDir;
+        $this->backupsDir = $backupsDir;
     }
-
 }
