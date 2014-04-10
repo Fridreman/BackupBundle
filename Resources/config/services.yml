@@ -1,20 +1,4 @@
 services:
-    dizda.cloudbackup.client.cloudapp:
-        class: Dizda\CloudBackupBundle\Clients\CloudAppClient
-        arguments:
-            - %dizda_cloud_backup.cloud_storages.cloudapp.user%
-            - %dizda_cloud_backup.cloud_storages.cloudapp.password%
-
-    dizda.cloudbackup.client.dropbox:
-        class: Dizda\CloudBackupBundle\Clients\DropboxClient
-        arguments:
-            - %dizda_cloud_backup.cloud_storages.dropbox.user%
-            - %dizda_cloud_backup.cloud_storages.dropbox.password%
-            - %dizda_cloud_backup.cloud_storages.dropbox.remote_path%
-
-    dizda.cloudbackup.client.gaufrette:
-        class: Dizda\CloudBackupBundle\Clients\GaufretteClient
-
     dizda.cloudbackup.database.mongodb:
         class: Dizda\CloudBackupBundle\Databases\MongoDB
         arguments:
